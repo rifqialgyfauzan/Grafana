@@ -1268,3 +1268,17 @@ t=2020-07-17T18:01:57+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Err
 t=2020-07-17T18:01:57+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=75 size=549 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
 t=2020-07-17T18:02:21+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
 t=2020-07-17T18:02:21+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=84 size=549 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
+t=2020-07-17T22:10:22+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T22:10:22+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/Grafana/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T22:10:22+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/Grafana/grafana-7.1.0
+t=2020-07-17T22:10:22+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/Grafana/grafana-7.1.0/data
+t=2020-07-17T22:10:22+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/Grafana/grafana-7.1.0/data/log
+t=2020-07-17T22:10:22+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/Grafana/grafana-7.1.0/data/plugins
+t=2020-07-17T22:10:22+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/Grafana/grafana-7.1.0/conf/provisioning
+t=2020-07-17T22:10:22+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T22:10:22+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T22:10:22+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T22:10:23+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T22:10:23+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T22:10:23+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T22:13:37+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
