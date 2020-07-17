@@ -1,0 +1,1270 @@
+t=2020-07-16T20:34:27+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T20:34:27+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T20:34:27+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T20:34:27+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T20:34:27+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T20:34:27+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T20:34:27+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T20:34:27+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T20:34:27+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T20:34:27+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create migration_log table"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create user table"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index user.login"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index user.email"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_login - v1"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_email - v1"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table user to user_v1 - v1"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create user table v2"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_login - v2"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_email - v2"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old table user_v1"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Add column help_flags1 to user table"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Update user table charset"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Add last_seen_at column to user"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Add missing user data"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Add is_disabled column to user"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Add index user.login/user.email"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create temp user table v1-7"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v1-7"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v1-7"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v1-7"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v1-7"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="Update temp_user table charset"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="create star table"
+t=2020-07-16T20:34:27+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index star.user_id_dashboard_id"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create org table v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_name - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create org_user table v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_org_user_org_id - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_user_org_id_user_id - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update org table charset"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update org_user table charset"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Migrate all Read Only Viewers to Viewers"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard table"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="add index dashboard.account_id"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_account_id_slug"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_tag table"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_tag.dasboard_id_term"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard to dashboard_v1 - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_org_id - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_org_id_slug - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="copy dashboard v1 to v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="alter dashboard.data to mediumtext v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column updated_by in dashboard - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column created_by in dashboard - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column gnetId in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for gnetId in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_id in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for plugin_id in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_id in dashboard_tag"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update dashboard table charset"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_tag table charset"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column folder_id in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column isFolder in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column has_acl in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column uid in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in dashboard"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index dashboard_org_id_uid"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_slug"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Update dashboard title length"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index for dashboard_org_id_title_folder_id"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="copy dashboard_provisioning v1 to v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="drop dashboard_provisioning_tmp_qwerty"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add check_sum column"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_title"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create data_source table"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="add index data_source.account_id"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index data_source.account_id_name"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_data_source_account_id - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_data_source_account_id_name - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table data_source to data_source_v1 - v1"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create data_source table v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_data_source_org_id - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_data_source_org_id_name - v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old table data_source_v1 #2"
+t=2020-07-16T20:34:28+0700 lvl=info msg="Executing migration" logger=migrator id="Add column with_credentials"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add secure json data column"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update data_source table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update initial version to 1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add read_only data column"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Migrate logging ds to loki ds"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update json_data with nulls"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add uid column"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update uid value"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index datasource_org_id_uid"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create api_key table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="add index api_key.key"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id_name"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_api_key_account_id - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_key - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_account_id_name - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table api_key to api_key_v1 - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create api_key table v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_api_key_org_id - v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_key - v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_org_id_name - v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="copy api_key v1 to v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old table api_key_v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update api_key table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add expires to api_key table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v4"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_snapshot_v4 #1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v5 #2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_key - v5"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_delete_key - v5"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_snapshot_user_id - v5"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_snapshot to mediumtext v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_snapshot table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add column external_delete_url to dashboard_snapshots table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create quota table v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_quota_org_id_user_id_target - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update quota table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create plugin_setting table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_version to plugin_settings"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update plugin_setting table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create session table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist_item table"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create playlist table v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create playlist item table v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update playlist table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update playlist_item table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v2"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v3"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create preferences table v3"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update preferences table charset"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Add column team_id in preferences"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="Update team_id column values in preferences"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="create alert table v1"
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="add index alert org_id & id "
+t=2020-07-16T20:34:29+0700 lvl=info msg="Executing migration" logger=migrator id="add index alert state"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index alert dashboard_id"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Create alert_rule_tag table v1"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_rule_tag.alert_id_tag_id"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="create alert_notification table v1"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column is_default"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column frequency"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column send_reminder"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column disable_resolve_message"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification org_id & name"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Update alert table charset"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Update alert_notification table charset"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="create notification_journal table v1"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index notification_journal org_id & alert_id & notifier_id"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="drop alert_notification_journal"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="create alert_notification_state table v1"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification_state org_id & alert_id & notifier_id"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add for to alert table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column uid in alert_notification"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in alert_notification"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index alert_notification_org_id_uid"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_name"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Drop old annotation table v4"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="create annotation table v5"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index annotation 0 v3"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index annotation 1 v3"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index annotation 2 v3"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index annotation 3 v3"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="add index annotation 4 v3"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Update annotation table charset"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column region_id to annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Drop category_id index"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add column tags to annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v2"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add unique index annotation_tag.annotation_id_tag_id"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Update alert annotations and set TEXT to empty"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add created time to annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add updated time to annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for created in annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for updated in annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Convert existing annotations from seconds to milliseconds"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add epoch_end column"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for epoch_end"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Make epoch_end the same as epoch"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Move region to single row"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch from annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_dashboard_id_panel_id_epoch from annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_dashboard_id_epoch_end_epoch on annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for org_id_epoch_end_epoch on annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Remove index org_id_epoch_epoch_end from annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="Add index for alert_id on annotation table"
+t=2020-07-16T20:34:30+0700 lvl=info msg="Executing migration" logger=migrator id="create test_data table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard_version table v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_version.dashboard_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Set dashboard version to 1 where 0"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="save existing dashboard data in dashboard_version table v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_version.data to mediumtext v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create team table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index team.org_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index team_org_id_name"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create team member table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index team_member.org_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index team_member_org_id_team_id_user_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index team_member.team_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add column email to team table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add column external to team_member table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add column permission to team_member table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create dashboard acl table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_acl_dashboard_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_user_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_team_id"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="save default acl rules in dashboard_acl table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create tag table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index tag.key_value"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create login attempt table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="add index login_attempt.username"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_login_attempt_username - v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create login_attempt v2"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_login_attempt_username - v2"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="copy login_attempt v1 to v2"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="drop login_attempt_tmp_qwerty"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create user auth table"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create index IDX_user_auth_auth_module_auth_id - v1"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="alter user_auth.auth_id to length 190"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add OAuth access token to user_auth"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add OAuth refresh token to user_auth"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add OAuth token type to user_auth"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add OAuth expiry to user_auth"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="Add index to user_id column in user_auth"
+t=2020-07-16T20:34:31+0700 lvl=info msg="Executing migration" logger=migrator id="create server_lock table"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="add index server_lock.operation_uid"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="create user auth token table"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.auth_token"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index user_auth_token.prev_auth_token"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="create cache_data table"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Executing migration" logger=migrator id="add unique index cache_data.cache_key"
+t=2020-07-16T20:34:32+0700 lvl=info msg="Created default admin" logger=sqlstore user=admin
+t=2020-07-16T20:34:32+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T20:34:32+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T20:34:32+0700 lvl=info msg="External plugins directory created" logger=plugins directory=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T20:34:32+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:32+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:32+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:37+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T20:34:37+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T20:34:37+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T20:34:37+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T20:34:37+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T20:34:37+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T20:34:37+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T20:34:37+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T20:34:37+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T20:34:37+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T20:34:37+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T20:34:37+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T20:34:37+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:37+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:37+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:34:37+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T20:36:58+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T20:36:58+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T20:36:58+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T20:36:58+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T20:36:58+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T20:36:58+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T20:36:58+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T20:36:58+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T20:36:58+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T20:36:58+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T20:36:58+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T20:36:58+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T20:36:58+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:36:58+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T20:36:59+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:36:59+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:48:43+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T20:48:43+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T20:48:43+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T20:48:43+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T20:48:43+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T20:48:43+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T20:48:43+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T20:48:43+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T20:48:43+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T20:48:43+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T20:48:43+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T20:48:43+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T20:48:43+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:48:43+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:48:43+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T20:48:43+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:00:14+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:00:14+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:00:14+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:00:14+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:00:14+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:00:14+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:00:14+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:00:14+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:00:14+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:00:14+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:00:14+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:00:14+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:00:15+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:00:15+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:00:15+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:00:15+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:06:39+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:06:39+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:06:39+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:06:39+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:06:39+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:06:39+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:06:39+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:06:39+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:06:39+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:06:39+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:06:39+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:06:39+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:06:40+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:06:40+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:06:40+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:06:40+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:33+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:07:33+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:07:33+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:07:33+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:07:33+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:07:33+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:07:33+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:07:33+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:07:33+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:07:33+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:07:33+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:07:33+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:07:34+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:34+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:07:36+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:36+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:44+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:07:44+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:07:44+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:07:44+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:07:44+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:07:44+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:07:44+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:07:44+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:07:44+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:07:44+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:07:45+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:07:45+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:07:45+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:45+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:07:45+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:08:54+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:08:54+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:08:54+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:08:54+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:08:54+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:08:54+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:08:54+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:08:54+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:08:54+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:08:54+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:08:54+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:08:55+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:08:55+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:08:55+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:08:55+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:15:23+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:15:23+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:15:23+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:15:23+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:15:23+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:15:23+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:15:23+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:15:23+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:15:23+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:15:23+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:15:23+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:15:23+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:15:24+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:15:24+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:15:24+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:18:24+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:18:24+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:18:24+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:18:24+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:18:24+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:18:24+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:18:24+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:18:24+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:18:24+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:18:24+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:18:24+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:18:24+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:18:24+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:18:24+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:18:24+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:18:24+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:19:56+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:19:56+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:19:56+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:19:56+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:19:56+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:19:56+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:19:56+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:19:56+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:19:56+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:19:56+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:19:56+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:19:56+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:19:56+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:19:56+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:19:56+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:19:56+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:20:21+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:20:21+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:20:21+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:20:21+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:20:21+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:20:21+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:20:21+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:20:21+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:20:21+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:20:21+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:20:21+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:20:21+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:20:21+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:20:21+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:20:21+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:22:48+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:22:48+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:22:48+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:22:48+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:22:48+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:22:48+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:22:48+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:22:48+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:22:48+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:22:48+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:22:48+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:22:48+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:22:48+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:22:48+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:22:48+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:22:48+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:29+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:23:29+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:23:29+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:23:29+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:23:29+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:23:29+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:23:29+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:23:29+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:23:29+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:23:29+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:23:29+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:23:29+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:23:30+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:30+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:30+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:46+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:23:46+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:23:46+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:23:46+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:23:46+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:23:46+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:23:46+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:23:46+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:23:46+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:23:46+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:23:46+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:23:46+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:23:46+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:46+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:23:46+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:16+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:34:16+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:34:16+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:34:16+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:34:16+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:34:16+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:34:16+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:34:16+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:34:16+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:34:16+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:34:16+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:34:16+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:34:16+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:16+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:16+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:27+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:34:27+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:34:27+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:34:27+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:34:27+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:34:27+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:34:27+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:34:27+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:34:27+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:34:27+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:34:27+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:34:27+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:34:27+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:27+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T21:34:27+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:34:27+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:36:00+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:36:00+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:36:00+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:36:00+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:36:00+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:36:00+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:36:00+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:36:00+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:36:00+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:36:00+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:36:00+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:36:00+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:36:00+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:36:00+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:36:00+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T21:58:48+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T21:58:48+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T21:58:48+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T21:58:48+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T21:58:48+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T21:58:48+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T21:58:48+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T21:58:48+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T21:58:48+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T21:58:48+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T21:58:48+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T21:58:48+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T21:58:48+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-16T22:01:03+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-16T22:01:03+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T22:02:52+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:02:52+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:02:52+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:02:52+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:02:52+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:02:52+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:02:52+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:02:52+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:02:52+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:02:52+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:02:52+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:02:52+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:02:53+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:02:53+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:02:53+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:03:44+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:03:44+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:03:44+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:03:44+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:03:44+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:03:44+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:03:44+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:03:44+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:03:44+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:03:44+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:03:44+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:03:44+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:03:45+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-16T22:07:34+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-16T22:07:34+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T22:09:51+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:09:51+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:09:51+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:09:51+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:09:51+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:09:51+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:09:51+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:09:51+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:09:51+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:09:51+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:09:51+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:09:51+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:09:52+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-16T22:09:53+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-16T22:09:53+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T22:10:05+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:10:05+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:10:05+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:10:05+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:10:05+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:10:05+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:10:05+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:10:05+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:10:05+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:10:05+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:10:05+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:10:05+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:10:06+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-16T22:10:13+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-16T22:10:13+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T22:10:44+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:10:44+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:10:44+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:10:44+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:10:44+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:10:44+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:10:44+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:10:44+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:10:44+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:10:44+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:10:44+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:10:44+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:10:44+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:10:44+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:10:44+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:04+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:11:04+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:11:04+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:11:04+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:11:04+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:11:04+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:11:04+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:11:04+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:11:04+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:11:04+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:11:04+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:11:04+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:11:04+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:04+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:04+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:10+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:11:10+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:11:10+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:11:10+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:11:10+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:11:10+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:11:10+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:11:10+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:11:10+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:11:10+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:11:10+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:11:11+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:11:11+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:11+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:11+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:16+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:11:16+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:11:16+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:11:16+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:11:16+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:11:16+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:11:16+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:11:16+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:11:16+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:11:16+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:11:16+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:11:16+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:11:16+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:16+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:16+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-16T22:11:16+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-16T22:11:32+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-16T22:11:32+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-16T22:11:32+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-16T22:11:32+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-16T22:11:32+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-16T22:11:32+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-16T22:11:32+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-16T22:11:32+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-16T22:11:32+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-16T22:11:32+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-16T22:11:32+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-16T22:11:32+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-16T22:11:32+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-16T22:12:05+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-16T22:12:05+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T00:13:08+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T00:13:08+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T00:13:08+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T00:13:08+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T00:13:08+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T00:13:08+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T00:13:08+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T00:13:08+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T00:13:08+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T00:13:08+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T00:13:08+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T00:13:09+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T00:13:09+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:09+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T00:13:11+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:11+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:30+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T00:13:30+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T00:13:30+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T00:13:30+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T00:13:30+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T00:13:30+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T00:13:30+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T00:13:30+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T00:13:30+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T00:13:30+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T00:13:30+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T00:13:30+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T00:13:30+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:30+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:30+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T00:13:48+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T00:13:48+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T00:13:48+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T00:13:48+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T00:13:48+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T00:13:48+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T00:13:48+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T00:13:48+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T00:13:48+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T00:13:48+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T00:13:48+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T00:13:48+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T00:13:48+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T00:14:03+0700 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=11 size=29 referer=
+t=2020-07-17T00:14:45+0700 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2020-07-17T00:15:02+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/user/password/reset status=400 remote_addr=[::1] time_ms=72 size=52 referer=http://localhost:3000/login
+t=2020-07-17T01:05:15+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=236 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:05:35+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=56 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:07:47+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=161 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:28:04+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=88 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:28:07+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=99 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:31:44+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=52 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:41+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:43:41+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=229 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:43+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:43:43+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=27 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:45+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1488 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:50+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:43:50+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=2 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:50+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:43:50+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=3 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:43:50+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=92 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:15+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1459 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:20+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:45:20+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=794 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:21+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=146 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:23+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=71 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:26+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=80 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:28+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=100 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:29+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=80 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:30+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=46 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:31+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=68 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:32+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=107 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:33+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=79 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:35+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=87 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:36+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=74 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:36+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=65 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:37+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=[::1]
+t=2020-07-17T01:45:37+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=[::1] time_ms=3 size=75 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T01:45:37+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=77 size=239 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T02:49:24+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:49:24+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:49:24+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:49:24+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:49:24+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:49:24+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:49:24+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:49:24+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:49:24+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:49:24+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:49:24+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:49:24+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:49:25+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:49:25+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T02:49:25+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:49:25+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:50:01+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:50:01+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:50:01+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:50:01+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:50:01+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:50:01+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:50:01+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:50:01+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:50:01+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:50:01+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:50:01+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:50:01+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:50:01+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T02:51:04+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:51:04+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:51:04+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:51:04+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:51:04+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:51:04+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:51:04+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:51:04+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:51:04+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:51:04+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:51:04+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:51:04+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:51:05+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:51:05+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T02:51:05+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:51:05+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:51:12+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T02:51:12+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T02:51:41+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:51:41+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:51:41+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:51:41+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:51:41+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:51:41+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:51:41+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:51:41+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:51:41+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:51:41+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:51:41+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:51:41+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:51:42+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T02:54:42+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:54:42+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:54:42+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:54:42+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:54:42+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:54:42+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:54:42+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:54:42+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:54:42+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:54:42+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:54:43+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:54:43+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:54:43+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:54:43+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T02:54:43+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:54:43+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:55:00+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:55:00+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:55:00+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:55:00+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:55:00+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:55:00+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:55:00+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:55:00+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:55:00+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:55:00+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:55:00+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:55:00+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:55:00+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T02:55:41+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:55:41+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:55:41+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:55:41+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:55:41+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:55:41+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:55:41+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:55:41+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:55:41+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:55:41+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:55:41+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:55:41+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:55:41+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:55:41+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T02:55:41+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:55:41+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T02:55:46+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T02:55:46+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T02:55:46+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T02:55:46+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T02:55:46+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T02:55:46+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T02:55:46+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T02:55:46+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T02:55:46+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T02:55:46+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T02:55:46+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T02:55:46+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T02:55:47+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T03:11:42+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:11:42+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:11:42+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:11:42+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:11:42+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:11:42+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:11:42+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:11:42+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:11:42+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:11:42+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:11:43+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:11:43+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:11:43+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:11:43+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:11:43+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:12:04+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:12:04+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:12:04+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:12:04+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:12:04+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:12:04+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:12:04+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:12:04+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:12:04+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:12:04+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:12:04+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:12:04+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:12:05+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T03:17:08+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T03:17:08+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T03:17:09+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:17:09+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:17:09+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:17:09+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:17:09+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:17:09+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:17:09+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:17:09+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:17:09+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:17:09+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:17:09+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:17:09+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:17:10+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T03:18:17+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T03:18:17+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T03:20:43+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:20:43+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:20:43+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:20:43+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:20:43+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:20:43+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:20:43+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:20:43+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:20:43+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:20:43+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:20:43+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:20:43+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:20:44+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:20:44+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:20:44+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T03:21:01+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:21:01+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:21:01+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:21:01+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:21:01+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:21:01+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:21:01+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:21:01+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:21:01+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:21:01+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:21:01+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:21:01+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:21:01+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T03:21:34+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T03:21:34+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T03:35:43+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T03:35:43+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T03:35:43+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T03:35:43+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T03:35:43+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T03:35:43+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T03:35:43+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T03:35:43+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T03:35:43+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T03:35:43+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T03:35:43+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T03:35:44+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T03:35:44+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T05:00:31+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T05:00:31+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T05:00:31+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T05:00:31+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T05:00:31+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T05:00:31+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T05:00:31+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T05:00:31+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T05:00:31+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T05:00:31+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T05:00:31+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T05:00:31+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T05:00:32+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T05:00:32+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T05:00:32+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T05:00:32+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T05:05:34+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T05:05:34+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T05:05:34+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T05:05:34+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T05:05:34+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T05:05:34+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T05:05:34+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T05:05:34+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T05:05:34+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T05:05:34+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T05:05:34+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T05:05:34+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T05:05:34+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T15:23:47+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T15:23:47+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T15:23:47+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T15:23:47+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T15:23:47+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T15:23:47+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T15:23:47+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T15:23:47+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T15:23:47+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T15:23:47+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T15:23:47+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T15:23:47+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T15:23:48+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T15:23:48+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T15:23:51+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T15:23:51+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T15:26:59+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T15:26:59+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T15:26:59+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T15:26:59+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T15:26:59+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T15:26:59+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T15:26:59+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T15:26:59+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T15:26:59+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T15:26:59+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T15:26:59+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T15:26:59+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T15:27:00+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T15:29:24+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T15:29:24+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1472 size=261 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T15:37:44+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T15:37:44+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=636 size=261 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T15:37:48+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T15:37:48+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=123 size=261 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T16:36:30+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T16:36:30+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=1640 size=261 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T16:38:20+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T16:38:20+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=[::1] time_ms=102 size=261 referer=http://localhost:3000/datasources/edit/1/
+t=2020-07-17T16:55:39+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=[::1] referer=http://localhost:3000/datasources/edit/2/ error="http: proxy error: dial tcp [::1]:9090: connect: connection refused"
+t=2020-07-17T16:55:40+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=[::1] time_ms=241 size=0 referer=http://localhost:3000/datasources/edit/2/
+t=2020-07-17T16:55:56+0700 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=192.168.1.222 time_ms=23 size=29 referer=
+t=2020-07-17T16:56:25+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=[::1] referer=http://localhost:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T16:56:25+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=[::1] time_ms=17 size=0 referer=http://localhost:3000/datasources/edit/2/
+t=2020-07-17T16:56:27+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=[::1] referer=http://localhost:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T16:56:27+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=[::1] time_ms=1 size=0 referer=http://localhost:3000/datasources/edit/2/
+t=2020-07-17T16:56:39+0700 lvl=eror msg="Invalid username or password" logger=context userId=0 orgId=0 uname= error="Invalid Username or Password" remote_addr=192.168.1.222
+t=2020-07-17T16:56:39+0700 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=POST path=/login status=401 remote_addr=192.168.1.222 time_ms=286 size=42 referer=http://192.168.1.222:3000/login
+t=2020-07-17T16:56:47+0700 lvl=eror msg="Invalid username or password" logger=context userId=0 orgId=0 uname= error="Invalid Username or Password" remote_addr=192.168.1.222
+t=2020-07-17T16:56:47+0700 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=POST path=/login status=401 remote_addr=192.168.1.222 time_ms=108 size=42 referer=http://192.168.1.222:3000/login
+t=2020-07-17T16:57:18+0700 lvl=info msg="Successful Login" logger=http.server User=admin@localhost
+t=2020-07-17T16:58:44+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T16:58:44+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=1 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T16:59:58+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T16:59:58+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=12 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:00:01+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:00:01+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=1 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:00:02+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:00:02+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=7 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:00:03+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:00:03+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=3 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:00:03+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:00:03+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=2 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:01:16+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=272 size=255 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:01:38+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=45 size=247 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:01:40+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=70 size=247 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:01:59+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:01:59+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=982 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:02:01+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:02:01+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=109 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:02:30+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:30+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=1 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:34+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:34+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=1 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:35+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:35+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=1 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:35+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:35+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=3 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:40+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:40+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=2 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:43+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:43+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=2 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:02:43+0700 lvl=eror msg="Data proxy error" logger=data-proxy-log userId=1 orgId=1 uname=admin path=/api/datasources/proxy/2/api/v1/query remote_addr=192.168.1.222 referer=http://192.168.1.222:3000/datasources/edit/2/ error="http: proxy error: dial tcp 192.168.1.222:9090: connect: connection refused"
+t=2020-07-17T17:02:43+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/api/datasources/proxy/2/api/v1/query status=502 remote_addr=192.168.1.222 time_ms=17 size=0 referer=http://192.168.1.222:3000/datasources/edit/2/
+t=2020-07-17T17:10:10+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:10+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=103 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:10:28+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:28+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=81 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:10:52+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:52+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=69 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:10:55+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:55+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=56 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:10:56+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:56+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=65 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:10:56+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T17:10:56+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=17 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:02+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'algy'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:02+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=167 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:27+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:27+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=97 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:30+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:30+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=56 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:31+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=192.168.1.222
+t=2020-07-17T17:12:31+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=192.168.1.222 time_ms=7 size=75 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:31+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:31+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=82 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:31+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:31+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=10 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:32+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:32+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=58 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:12:33+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:12:33+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=83 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:13+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:15:13+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=95 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:14+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:15:14+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=89 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:14+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=192.168.1.222
+t=2020-07-17T17:15:14+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=192.168.1.222 time_ms=1 size=75 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:14+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:15:14+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=7 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:15+0700 lvl=eror msg="Failed to update datasource. Reload new version and try again" logger=context userId=1 orgId=1 uname=admin error="Trying to update old version of datasource" remote_addr=192.168.1.222
+t=2020-07-17T17:15:15+0700 lvl=eror msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=PUT path=/api/datasources/1 status=500 remote_addr=192.168.1.222 time_ms=1 size=75 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:15+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:15:15+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=90 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:15:15+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:15:15+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=28 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:30:29+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:30:29+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=489 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:30:29+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:30:29+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=97 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:38:19+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T17:38:19+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T17:38:19+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T17:38:19+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T17:38:19+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T17:38:19+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T17:38:19+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T17:38:19+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T17:38:19+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T17:38:19+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T17:38:19+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T17:38:19+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T17:38:20+0700 lvl=eror msg="Stopped HTTPServer" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T17:38:20+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T17:38:20+0700 lvl=eror msg="A service failed" logger=server err="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T17:38:20+0700 lvl=eror msg="Server shutdown" logger=server reason="failed to open listener on address 0.0.0.0:3000: listen tcp 0.0.0.0:3000: bind: address already in use"
+t=2020-07-17T17:39:51+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T17:39:51+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T17:39:51+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T17:39:51+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T17:39:51+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T17:39:51+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T17:39:51+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T17:39:51+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T17:39:51+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T17:39:51+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T17:39:51+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T17:39:52+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T17:39:52+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T17:40:02+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:40:02+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=82 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:40:04+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:40:04+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=91 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:40:06+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:40:06+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=82 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:40:06+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:40:06+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=60 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:40:07+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:40:07+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=72 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:43:12+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:43:12+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=126 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:43:29+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T17:43:29+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T17:43:31+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T17:43:31+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T17:43:31+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T17:43:31+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T17:43:31+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T17:43:31+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T17:43:31+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T17:43:31+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T17:43:31+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T17:43:31+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T17:43:31+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T17:43:31+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T17:43:32+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T17:43:44+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:43:44+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=113 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:44:43+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:44:43+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=59 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:44:44+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:44:44+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=95 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:47:33+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=62 size=231 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:48:22+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:48:22+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=99 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:48:42+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'grafana'@'localhost' (using password: YES)"
+t=2020-07-17T17:48:42+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=85 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:51:56+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: NO)"
+t=2020-07-17T17:51:56+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=156 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:51:57+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: NO)"
+t=2020-07-17T17:51:57+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=67 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:52:34+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1049: Unknown database 'sqlite3'"
+t=2020-07-17T17:52:34+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=1329 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:52:58+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T17:52:58+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=98 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:53:49+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T17:53:49+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T17:53:50+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T17:53:50+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T17:53:50+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T17:53:50+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T17:53:50+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T17:53:50+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T17:53:50+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T17:53:50+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T17:53:50+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T17:53:50+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T17:53:50+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T17:53:50+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T17:53:50+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T17:53:55+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T17:53:55+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=121 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:54:10+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T17:54:10+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=91 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T17:56:58+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T17:56:58+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T17:56:59+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T17:56:59+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T17:56:59+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T17:56:59+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T17:56:59+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T17:56:59+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T17:56:59+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T17:56:59+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T17:56:59+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T17:56:59+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T17:56:59+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T17:56:59+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T17:57:00+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T17:57:15+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T17:57:15+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=97 size=261 referer=http://192.168.1.222:3000/datasources/edit/1/
+t=2020-07-17T18:01:02+0700 lvl=info msg="Shutdown started" logger=server reason="System signal: interrupt"
+t=2020-07-17T18:01:02+0700 lvl=info msg="Stopped Stream Manager"
+t=2020-07-17T18:01:04+0700 lvl=info msg="Starting Grafana" logger=server version=7.1.0 commit=8101355285 branch=HEAD compiled=2020-07-16T18:04:17+0700
+t=2020-07-17T18:01:04+0700 lvl=info msg="Config loaded from" logger=settings file=/home/algy/grafana-7.1.0/conf/defaults.ini
+t=2020-07-17T18:01:04+0700 lvl=info msg="Path Home" logger=settings path=/home/algy/grafana-7.1.0
+t=2020-07-17T18:01:04+0700 lvl=info msg="Path Data" logger=settings path=/home/algy/grafana-7.1.0/data
+t=2020-07-17T18:01:04+0700 lvl=info msg="Path Logs" logger=settings path=/home/algy/grafana-7.1.0/data/log
+t=2020-07-17T18:01:04+0700 lvl=info msg="Path Plugins" logger=settings path=/home/algy/grafana-7.1.0/data/plugins
+t=2020-07-17T18:01:04+0700 lvl=info msg="Path Provisioning" logger=settings path=/home/algy/grafana-7.1.0/conf/provisioning
+t=2020-07-17T18:01:04+0700 lvl=info msg="App mode production" logger=settings
+t=2020-07-17T18:01:04+0700 lvl=info msg="Connecting to DB" logger=sqlstore dbtype=sqlite3
+t=2020-07-17T18:01:04+0700 lvl=info msg="Starting DB migration" logger=migrator
+t=2020-07-17T18:01:04+0700 lvl=info msg="Starting plugin search" logger=plugins
+t=2020-07-17T18:01:04+0700 lvl=info msg="Registering plugin" logger=plugins name="Direct Input"
+t=2020-07-17T18:01:04+0700 lvl=info msg="HTTP Server Listen" logger=http.server address=[::]:3000 protocol=http subUrl= socket=
+t=2020-07-17T18:01:22+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T18:01:22+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=202 size=1464 referer=http://192.168.1.222:3000/explore
+t=2020-07-17T18:01:33+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T18:01:33+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=44 size=365 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
+t=2020-07-17T18:01:57+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T18:01:57+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=88 size=549 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
+t=2020-07-17T18:01:57+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T18:01:57+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=75 size=549 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
+t=2020-07-17T18:02:21+0700 lvl=eror msg="query error" logger=tsdb.mysql err="Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"
+t=2020-07-17T18:02:21+0700 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=POST path=/api/tsdb/query status=400 remote_addr=192.168.1.222 time_ms=84 size=549 referer="http://192.168.1.222:3000/explore?orgId=1&left=%5B%22now-1h%22,%22now%22,%22grafana%22,%7B%22datasource%22:%22grafana%22%7D,%7B%22ui%22:%5Btrue,true,true,%22none%22%5D%7D%5D"
